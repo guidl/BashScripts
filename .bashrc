@@ -8,20 +8,16 @@
 # dev/null : fichier spécifique unix tout ce qui est dedans est supprimé
 # $? : code de retour de la dernière cmd exécutée
 # mettre un fond de couleur sur les terminaux linux
-mettre un echo dans le bashrc pour avoir les consignes quand on se loggue
-
-grep --color -C context  = -B + -A ^pour grep
-grep -rin "egrep test|azer"-> à quoi cela sert?
-
-
+# grep --color -C context  = -B + -A ^pour grep
+# grep -rin "egrep test|azer"-> à quoi cela sert?
 
 # pour quitter une session ssh gelée il suffisait de saisir les 3 touches "Entrée ~ ."
 # ssh -X = ?
 
-# Variables
+# 1 Variables
 # export PATH=$PATH:/opt/bin
 
-# Prompt
+# 2 Prompt
 # Terminal colours (after installing GNU coreutils)
 NM="\[\033[0;38m\]" #means no background and white lines
 HI="\[\033[0;33m\]" #change this for letter colors
@@ -38,7 +34,7 @@ BLUE='\[\033[0;34m\]'
 NORMAL='\[\033[00m\]'
 PS1="${BLUE}(${RED}\w${BLUE}) ${NORMAL}\h ${RED}\$ ${NORMAL}"
 
-# Aliases
+# 3 Aliases
 alias ls='ls -h --color=auto'
 alias ll='ls -l'
 alias la='ls -A'
@@ -59,6 +55,7 @@ alias p="ps aux |grep "
 alias k="kate $1"
 alias source="source ~/.bashrc"
 
+# 4 functions
 # Pour chercher un fichier et à l'intérieur une information
 function findOcc(){ cd XWZ;find . -name $1 -print0 | xargs -0 grep $2;}
 
@@ -66,7 +63,7 @@ function findOcc(){ cd XWZ;find . -name $1 -print0 | xargs -0 grep $2;}
 # list= `grep  -r "@Usedcomponent" src/imp | awk -F ";"  '{printf $i"\n"}'`
 # for i in  $list : do echo $i; cat $i | grep 'tpm' :done
 
-#Other conf file
+# 5 Other conf file
 #if [ -f /etc/bashrc ]; then 
 #        . /etc/bashrc 
 #fi
