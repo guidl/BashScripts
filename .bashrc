@@ -59,6 +59,10 @@ alias source="source ~/.bashrc"
 # Pour chercher un fichier et à l'intérieur une information
 function findOcc(){ cd XWZ;find . -name $1 -print0 | xargs -0 grep $2;}
 
+function help(){
+  echo -e "alias f=find . |grep "
+}
+
 # Commande tree sous Linux 
 # list= `grep  -r "@Usedcomponent" src/imp | awk -F ";"  '{printf $i"\n"}'`
 # for i in  $list : do echo $i; cat $i | grep 'tpm' :done
